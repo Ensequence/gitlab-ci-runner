@@ -14,12 +14,15 @@ RUN apt-get install -y -q libicu-dev
 
 ## ruby-install
 
-RUN curl -O ruby-install-0.1.4.tar.gz https://github.com/postmodern/ruby-install/archive/v0.1.4.tar.gz
+RUN curl -o ruby-install-0.1.4.tar.gz -O https://github.com/postmodern/ruby-install/archive/v0.1.4.tar.gz
 RUN tar -xzvf ruby-install-0.1.4.tar.gz
 
 ## install ruby 1.9.3
 
 RUN ruby-install-0.1.4/bin/ruby-install ruby 1.9.3 -i /opt/rubies/ruby-1.9.3
+
+# clean up and remove ruby-install
+#RUN rm -rf ruby-install-0.1.4
 
 ENV PATH $PATH:/opt/rubies/ruby-1.9.3/bin/
 
