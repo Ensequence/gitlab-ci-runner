@@ -32,7 +32,7 @@ run         rm -rf ruby-install-0.1.4/
 env         PATH $PATH:/opt/rubies/ruby-1.9.3/bin/
 #run         export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin/
 
-run         /opt/rubies/ruby-1.9.3/bin/gem install bundler
+run         ./opt/rubies/ruby-1.9.3/bin/gem install bundler
 
 
 
