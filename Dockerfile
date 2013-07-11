@@ -6,7 +6,7 @@ MAINTAINER weisjohn "weis.john@gmail.com"
 # deps
 
 RUN apt-get update -y
-RUN apt-get install -y -q wget git build-essential libicu-dev
+RUN apt-get install -y -q sudo wget git build-essential libicu-dev
 
 
 # ruby
