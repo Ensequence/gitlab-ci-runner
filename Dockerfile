@@ -1,16 +1,18 @@
-FROM ubuntu:12.04
+FROM 8cb4d8d09c6d
+
+#FROM ubuntu:12.04
 
 MAINTAINER weisjohn "weis.john@gmail.com"
 
 
 # deps
 
-RUN apt-get update -y
-RUN apt-get install -y curl git build-essential libicu-dev
+#RUN apt-get update -y
+#RUN apt-get install -y curl git build-essential libicu-dev
 
 # ruby
 
-RUN bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+RUN curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s standard
 
 RUN source /etc/profile.d/rvm.sh
 
