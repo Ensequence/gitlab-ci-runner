@@ -30,7 +30,7 @@ run         rm -rf ruby-install-0.1.4/
 run         echo "export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin" >> /root/.profile
 
 ## grab gitlab-ci-runner 
-run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner && cd runner
+run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner
 
 ## everything from here on out needs a PATH-ed shell
 add         build_gitlab-ci-runner.sh /build_gitlab-ci-runner.sh
