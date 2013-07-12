@@ -20,7 +20,7 @@ module GitlabCi
     end
 
     def generate_ssh_key
-      system('ssh-keygen -t rsa -f /.ssh/id_rsa.pub')
+      system('ssh-keygen -t rsa -f /.ssh/id_rsa')
     end
 
     def register_runner
