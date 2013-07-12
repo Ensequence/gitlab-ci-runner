@@ -36,5 +36,6 @@ run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner
 add         build_gitlab-ci-runner.sh /build_gitlab-ci-runner.sh
 run         /bin/bash /build_gitlab-ci-runner.sh
 
+run         echo "hello" #simple cache point?
 
 # TODO: use CMD to be the runner step? http://docs.docker.io/en/latest/use/builder/#cmd
