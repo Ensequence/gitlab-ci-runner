@@ -24,7 +24,7 @@ run         tar -xzvf ruby-install-0.1.4.tar.gz
 run         ruby-install-0.1.4/bin/ruby-install -i /usr/local/ ruby 1.9.3 
 
 ## cleanup and remove ruby-install
-run         rm -rf ruby-install-0.1.4/
+run         rm -rf ruby-install-0.1.4/ ruby-install-0.1.4.tar.gz
 
 ## inject into the $PATH to ruby into the ~/.profile  (needed later)
 #run         echo "export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin" >> /root/.profile
@@ -43,7 +43,7 @@ run         cd runner && bundle install
 
 ## mkdir for .ssh keys in the base director
 
-run         mkdir /.ssh
+#run         mkdir /.ssh
 
 run         echo "hello" # cache point
 
