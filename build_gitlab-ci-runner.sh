@@ -6,7 +6,7 @@ source /root/.profile
 
 ## installs gitlab-ci-runner
 
-gem install bunder
+gem install bundler
 
 ## move into the gitlab-ci-runner folder
 
