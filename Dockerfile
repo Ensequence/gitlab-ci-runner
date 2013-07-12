@@ -41,9 +41,13 @@ run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner 
 run         cd runner && bundle install 
 
 
-## mkdir for .ssh keys in the base director
+# setup ssh 
 
-#run         mkdir /.ssh
+## mkdir for .ssh keys in the base director
+run         mkdir /.ssh
+
+## modify ssh config to use the appropriate key 
+run         echo "\nIdentityFile /.ssh/id_rsa" >> /etc/ssh/ssh_config
 
 run         echo "hello" # cache point
 
