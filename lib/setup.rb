@@ -26,7 +26,7 @@ module GitlabCi
     def register_runner
       registered = false
 
-      public_key = File.read(File.expand_path('/.ssh/id_rsa.pub'))
+      public_key = File.read(File.expand_path('/.ssh/id_rsa'))
 
       until registered
         puts 'Please type gitlab-ci runners token: '
