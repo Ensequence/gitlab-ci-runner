@@ -8,9 +8,9 @@ source /root/.profile
 
 gem install bundler
 
-## move into the gitlab-ci-runner folder
+## move into the runner folder
 
-cd gitlab-ci-runner
+cd runner
 
 ## build the deps
 
