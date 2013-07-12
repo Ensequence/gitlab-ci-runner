@@ -27,10 +27,10 @@ run         ruby-install-0.1.4/bin/ruby-install ruby 1.9.3 -i /opt/rubies/ruby-1
 run         rm -rf ruby-install-0.1.4/
 
 ## inject into the $PATH to ruby into the ~/.profile  (needed later)
-run         echo "export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin" >> /root/.profile
+#run         echo "export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin" >> /root/.profile
 
 ## install bundler
-run         /opt/rubies/ruby-1.9.3/bin/gem install bundler
+run         gem install bundler
 
 ## grab gitlab-ci-runner 
 run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner && cd runner
@@ -38,7 +38,7 @@ run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner 
 
 ## install dependencies for gitlab-ci-runner
 
-run         cd runner && /opt/rubies/ruby-1.9.3/bin/bundle install 
+run         cd runner && bundle install 
 
 
 run         echo "hello" # cache point
