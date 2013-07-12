@@ -29,8 +29,11 @@ run         rm -rf ruby-install-0.1.4/
 ## setup ruby path
 
 ###  which of these two even runs?
-env         PATH $PATH:/opt/rubies/ruby-1.9.3/bin/
+#env         PATH $PATH:/opt/rubies/ruby-1.9.3/bin/
 #run         export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin/
+
+# inject into the $PATH to ruby into the ~/.profile 
+run         echo "export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin" >> /root/.bashrc
 
 run         ./opt/rubies/ruby-1.9.3/bin/gem install bundler
 
