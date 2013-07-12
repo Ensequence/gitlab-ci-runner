@@ -29,19 +29,12 @@ run         rm -rf ruby-install-0.1.4/
 ## inject into the $PATH to ruby into the ~/.profile 
 run         echo "export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin" >> /root/.profile
 
-## install bundler
-run         /opt/rubies/ruby-1.9.3/bin/gem install bundler
-
-
-# grab the code 
-
+## grab gitlab-ci-runner 
 run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner && cd runner
 
-
-# install deps
-
-run         /opt/rubies/ruby-1.9.3/bin/bundle install
-
+## everything from here on out needs a PATH-ed shell
+copy        build_gitlab-ci-runner.sh /build_gitlab-ci-runner.sh
+run         /bin/bash /build_gitlab-ci-runner.sh
 
 
 # TODO: use CMD to be the runner step? http://docs.docker.io/en/latest/use/builder/#cmd
