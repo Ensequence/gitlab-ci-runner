@@ -41,4 +41,6 @@ run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner 
 run         cd runner && /opt/rubies/ruby-1.9.3/bin/bundle install 
 
 
+run         echo "hello" # cache point
+
 # TODO: use CMD to be the runner step? http://docs.docker.io/en/latest/use/builder/#cmd
