@@ -41,6 +41,10 @@ run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner 
 run         cd runner && bundle install 
 
 
+## mkdir for .ssh keys in the base director
+
+run         mkdir /.ssh
+
 run         echo "hello" # cache point
 
 # TODO: use CMD to be the runner step? http://docs.docker.io/en/latest/use/builder/#cmd
