@@ -33,7 +33,7 @@ run         echo "export PATH=$PATH:/opt/rubies/ruby-1.9.3/bin" >> /root/.profil
 run         git clone https://github.com/Ensequence/gitlab-ci-runner.git runner && cd runner
 
 ## everything from here on out needs a PATH-ed shell
-copy        build_gitlab-ci-runner.sh /build_gitlab-ci-runner.sh
+add         build_gitlab-ci-runner.sh /build_gitlab-ci-runner.sh
 run         /bin/bash /build_gitlab-ci-runner.sh
 
 
