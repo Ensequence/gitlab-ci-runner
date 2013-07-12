@@ -21,7 +21,7 @@ run         wget -O ruby-install-0.1.4.tar.gz https://github.com/postmodern/ruby
 run         tar -xzvf ruby-install-0.1.4.tar.gz
 
 ## install ruby 1.9.3
-run         ruby-install-0.1.4/bin/ruby-install -i /usr/local/bin ruby 1.9.3 
+run         ruby-install-0.1.4/bin/ruby-install -i /usr/local/ ruby 1.9.3 
 
 ## cleanup and remove ruby-install
 run         rm -rf ruby-install-0.1.4/
